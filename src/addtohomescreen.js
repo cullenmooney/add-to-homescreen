@@ -488,7 +488,9 @@ ath.Class.prototype = {
 		// try to get the highest resolution application icon
 		if ( !this.applicationIcon ) {
 			if ( ath.OS == 'ios' ) {
-				this.applicationIcon = document.querySelector('head link[rel^=apple-touch-icon][sizes="180x180"],head link[rel^=apple-touch-icon][sizes="152x152"],head link[rel^=apple-touch-icon][sizes="144x144"],head link[rel^=apple-touch-icon][sizes="120x120"],head link[rel^=apple-touch-icon][sizes="114x114"],head link[rel^=apple-touch-icon]');
+				// **** originally listed below
+				// head link[rel^=apple-touch-icon][sizes="180x180"],head link[rel^=apple-touch-icon][sizes="152x152"],head link[rel^=apple-touch-icon][sizes="144x144"],head link[rel^=apple-touch-icon][sizes="120x120"],head link[rel^=apple-touch-icon][sizes="114x114"],
+				this.applicationIcon = document.querySelector('head link[rel^=apple-touch-icon]');
 			} else {
 				this.applicationIcon = document.querySelector('head link[rel^="shortcut icon"][sizes="196x196"],head link[rel^=apple-touch-icon]');
 			}
